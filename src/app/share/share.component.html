@@ -1,0 +1,5 @@
+<div class="media-links">
+	<a *ngFor="let share of shares" [href]="getLink(share)" target="_blank" [class]="className(share)">{{text.shareOn}}
+		{{share.media}}</a>
+	<a (click)="refresh($event)" class="link-next">{{text.nextQuote}}</a>
+</div>

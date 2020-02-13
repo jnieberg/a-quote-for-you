@@ -1,0 +1,64 @@
+color0 = rgba(255, 255, 255, 1);
+color1 = rgba(237, 203, 150, 1);
+color2 = rgba(247, 196, 165, 1);
+color3 = rgba(158, 118, 130, 1);
+color4 = rgba(96, 87, 112, 1);
+color5 = rgba(77, 72, 97, 1);
+color-error = rgba(237, 118, 130, 1);
+font-size = 16px;
+line-height = 1.5em;
+font-size-h1 = (font-size * 2);
+font-size-h2 = (font-size * 1.8);
+font-size-h3 = (font-size * 1.6);
+font-size-h4 = (font-size * 1.4);
+font-size-small = (font-size * 0.75);
+font-family = 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+font-family-h1 = 'Lemonada', cursive;
+pad = 16px;
+width1 = 600px;
+width2 = 768px;
+width4 = 992px;
+width5 = 1200px;
+
+box-shadow(args...) {
+	box-shadow: args;
+	-webkit-box-shadow: args;
+	-moz-box-shadow: args;
+}
+
+fadein(speed = 1s) {
+	transition: opacity speed ease-in;
+	-webkit-transition: opacity speed ease-in;
+	-moz-transition: opacity speed ease-in;
+	-ms-transition: opacity speed ease-in;
+	-o-transition: opacity speed ease-in;
+}
+
+hoverHighlight() {
+	position: relative;
+
+	&::after {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background: rgba(255, 255, 255, 0.25);
+		content: '';
+		opacity: 0;
+
+		fadein(0.25s);
+	}
+
+	&:hover::after {
+		opacity: 1;
+	}
+}
+
+responsive(var) {
+	condition = 'screen and (min-width: %s)' % var;
+
+	@media condition {
+		{block};
+	}
+}

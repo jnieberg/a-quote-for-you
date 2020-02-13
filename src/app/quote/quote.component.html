@@ -1,0 +1,8 @@
+<main class="main">
+	<div *ngIf="showError" class="error">{{text.error.quote}}</div>
+	<blockquote [className]="showQuote ? 'show' : 'hide'">
+		<h2>{{content}}</h2>
+		<h3 (click)="refresh(author)">{{author}}</h3>
+	</blockquote>
+	<app-share *ngIf="showShare" [content]="content" [author]="author" (refreshE)="refresh()"></app-share>
+</main>
