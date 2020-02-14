@@ -1,8 +1,8 @@
 <main>
 	<div *ngIf="showError" class="error">{{text.error.quote}}</div>
-	<blockquote [className]="showQuote ? 'show' : 'hide'" (swipeleft)="refreshQuote()">
+	<blockquote class="visibility-state-{{showQuote}}" (swipeleft)="refreshQuote()">
 		<h2>{{content}}</h2>
-		<h3 (click)="refreshQuote(author)"><a href="javascript:void();" attr.alt="{{text.showMore}} {{author}}"
+		<h3 (click)="refreshQuote(author)"><a href="javascript:void(0);" attr.alt="{{text.showMore}} {{author}}"
 				 attr.title="{{text.showMore}} {{author}}">{{author}}</a>
 		</h3>
 	</blockquote>

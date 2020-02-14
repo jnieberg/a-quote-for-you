@@ -4,6 +4,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { CONFIGURATION } from 'src/config/config';
 import { templateElement } from 'src/test/template-element';
+import { VisibilityState } from '../enums/visibilityState';
 import { FooterComponent } from '../footer/footer.component';
 import { QuoteService } from '../services/quote.service';
 import { QuoteComponent } from './quote.component';
@@ -45,20 +46,20 @@ describe('Component: QuoteComponent', () => {
 			});
 		});
 		describe('* refreshQuote()', () => {
-			const thisResult = 'false';
+			const thisResult = 'hidden';
 			it(`"showQuote" should be "${thisResult}"`, () => {
 				component.refreshQuote();
-				expect(component.showQuote).toBeFalsy();
+				expect(component.showQuote).toBe(VisibilityState.hidden);
 			});
 		});
 	});
 	describe('* Template', () => {
 		describe('* Quote panel class', () => {
-			const thisResult = 'hide';
-			const thatResult = 'show';
+			const thisResult = 'visibility-state-0';
+			const thatResult = 'visibility-state-2';
 			it(`Should be "${thisResult}" and then "${thatResult}"`, () => {
 				expect(templateElement({ attr: 'class', element, query: 'blockquote' })).toBe(thisResult);
-				component.showQuote = true;
+				component.showQuote = VisibilityState.visible;
 				fixture.detectChanges();
 				expect(templateElement({ attr: 'class', element, query: 'blockquote' })).toBe(thatResult);
 			});

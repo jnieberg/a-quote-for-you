@@ -1,4 +1,4 @@
-import { browser, logging } from 'protractor';
+import { browser, by, element, logging, protractor } from 'protractor';
 import { AppPage } from './app.po';
 
 describe('Quote application', () => {
@@ -17,6 +17,7 @@ describe('Quote application', () => {
 	it('should display quote block', () => {
 		expect(page.getQuote()).toBeDefined();
 		expect(page.getQuote()).not.toBe('');
+		expect(page.getQuoteClass()).toBe('visibility-state-2');
 	});
 
 	it('should display quote text', () => {
@@ -29,16 +30,26 @@ describe('Quote application', () => {
 		expect(page.getQuoteAuthor()).not.toBe('');
 	});
 
-	it('should display share buttons', () => {
+	it('should display social media buttons', () => {
 		expect(page.getShareButton()).toBeDefined();
 		expect(page.getShareButton()).not.toBe('');
 		expect(page.getShareButtonLink()).toBeDefined();
 		expect(page.getShareButtonLink()).not.toBe('');
 	});
 
-	it('should display a next button', () => {
+	it('should display a next quote button', () => {
 		expect(page.getNextButton()).toBeDefined();
 		expect(page.getNextButton()).not.toBe('');
+	});
+
+	it('should be possible to click the next quote button', () => {
+		const elmNext = element(by.css('app-footer .link-next'));
+		browser.actions().mouseMove(elmNext).perform();
+		browser.actions().click(protractor.Button.LEFT).perform();
+		browser.waitForAngularEnabled(false);
+		expect(page.getQuoteClass()).toBe('visibility-state-0');
+		browser.waitForAngularEnabled(true);
+		expect(page.getQuoteClass()).toBe('visibility-state-2');
 	});
 
 	afterEach(async () => {

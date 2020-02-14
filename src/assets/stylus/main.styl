@@ -2,20 +2,26 @@ html {
 	height: 100%;
 
 	body {
+		overflow-x: hidden;
 		height: 100%;
 		color: color5;
 		font-size: font-size-sm;
 		font-family: font-family;
 
-		.hide {
-			fadeIn();
+		.visibility-state-0 {
+			animate();
 
 			left: -100%;
 			opacity: 0;
 		}
 
-		.show {
-			fadeIn();
+		.visibility-state-1 {
+			left: 100%;
+			opacity: 0;
+		}
+
+		.visibility-state-2 {
+			animate();
 
 			left: 0;
 			opacity: 1;

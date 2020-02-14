@@ -13,6 +13,10 @@ export class AppPage {
 		return element(by.css('app-quote blockquote')).getText() as Promise<string>;
 	}
 
+	getQuoteClass(): Promise<string> {
+		return element(by.css('app-quote blockquote')).getAttribute('class') as Promise<string>;
+	}
+
 	getQuoteText(): Promise<string> {
 		return element(by.css('app-quote blockquote h2')).getText() as Promise<string>;
 	}

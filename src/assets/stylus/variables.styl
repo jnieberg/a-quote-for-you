@@ -27,7 +27,7 @@ box-shadow(args...) {
 	-moz-box-shadow: args;
 }
 
-fadeIn(speed = 1s) {
+animate(speed = 0.5s) {
 	transition: all speed ease-out;
 	-webkit-transition: all speed ease-out;
 	-moz-transition: all speed ease-out;
@@ -49,7 +49,7 @@ hoverTo(color) {
 		content: '';
 		opacity: 0;
 
-		fadeIn(0.25s);
+		animate(0.25s);
 
 		+responsive(width2) {
 			border-radius: 21px;
