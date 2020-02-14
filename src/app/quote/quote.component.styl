@@ -11,7 +11,7 @@ blockquote {
 	position: relative;
 	display: flex;
 	flex-direction: column;
-	margin: 0 auto (pad * 5);
+	margin: 0 auto 58px;
 	padding: 0;
 	width: calc(100% - 50px);
 	border: 25px solid #000000;
@@ -24,8 +24,8 @@ blockquote {
 		padding-top: 0;
 		color: color0;
 		text-align: center;
-		font-size: font-size-h3;
-		font-family: font-family-h1;
+		font-size: font-size-md;
+		font-family: font-family-h2;
 		line-height: line-height;
 
 		&::before {
@@ -39,11 +39,11 @@ blockquote {
 		}
 
 		+responsive(width2) {
-			font-size: font-size-h2;
+			font-size: font-size-lg;
 		}
 
 		+responsive(width3) {
-			font-size: font-size-h2;
+			font-size: font-size-xl;
 		}
 	}
 
@@ -55,28 +55,49 @@ blockquote {
 		margin-bottom: -(pad * 0.5);
 		padding: (pad * 0.5);
 		color: color2;
-		font-size: font-size-small;
-		font-family: font-family-h1;
+		font-size: font-size-xs;
+		font-family: font-family-h2;
 		line-height: line-height;
 		cursor: pointer;
 
-		hoverHighlight();
+		a {
+			color: color2;
+			font-size: font-size-xs;
+		}
+
+		hoverLight();
 
 		&::before {
 			content: '—';
 		}
 
 		+responsive(width2) {
-			font-size: font-size;
+			font-size: font-size-sm;
 		}
 
 		+responsive(width3) {
-			font-size: font-size;
+			font-size: font-size-sm;
 		}
 	}
 
 	+responsive(width2) {
 		padding: (pad * 1.5);
 		width: 75%;
+	}
+}
+
+footer {
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	padding: (pad * 0.5) 4px;
+	height: 34px;
+	background: color0;
+	box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.25);
+
+	app-share {
+		display: flex;
+		justify-content: space-between;
 	}
 }

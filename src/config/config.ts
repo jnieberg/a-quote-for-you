@@ -8,14 +8,17 @@ export const CONFIGURATION: Configuration = {
 	},
 	share: [{
 		media: 'Facebook',
-		uri: 'https://www.facebook.com/sharer/sharer.php?u=github.com%2Fjnieberg&quote=',
+		icon: 'facebook-f',
+		uri: 'https://www.facebook.com/sharer/sharer.php?u=quoteforyou.netlify.com&quote=',
 	}, {
 		media: 'Twitter',
-		uri: 'https://twitter.com/intent/tweet?via=jnieberg&text=',
+		icon: 'twitter',
+		uri: 'https://twitter.com/intent/tweet?text=',
 	}],
 	localization: {
-		title: 'A quote for you:',
+		title: '~ A Quote for You ~',
 		shareOn: 'Share on ',
+		showMore: 'Show more quotes from ',
 		nextQuote: 'Next quote',
 		error: {
 			quote: 'Could not get quote. Please be inspired later.'

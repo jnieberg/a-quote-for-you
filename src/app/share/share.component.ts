@@ -13,7 +13,7 @@ export class ShareComponent {
 	@Input() public author: string = '';
 	@Output() refreshE: EventEmitter<any> = new EventEmitter<any>();
 	public text: any = CONFIGURATION.localization;
-	public shares: Share[] = undefined;
+	public shares: Share[] = [];
 
 	constructor(private shareService: ShareService) {
 		this.shares = this.shareService.share;
@@ -28,7 +28,7 @@ export class ShareComponent {
 	}
 
 	public className(share: Share): string {
-		return `media-${share.media.toLowerCase()}`;
+		return `link-media-${share.media.toLowerCase()}`;
 	}
 
 	public refresh($event: MouseEvent): void {

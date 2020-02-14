@@ -5,20 +5,21 @@ color3 = rgba(158, 118, 130, 1);
 color4 = rgba(96, 87, 112, 1);
 color5 = rgba(77, 72, 97, 1);
 color-error = rgba(237, 118, 130, 1);
-font-size = 16px;
+font-size-sm = 16px;
+font-size-xxl = (font-size-sm * 2);
+font-size-xl = (font-size-sm * 1.8);
+font-size-lg = (font-size-sm * 1.6);
+font-size-md = (font-size-sm * 1.4);
+font-size-xs = (font-size-sm * 0.75);
 line-height = 1.5em;
-font-size-h1 = (font-size * 2);
-font-size-h2 = (font-size * 1.8);
-font-size-h3 = (font-size * 1.6);
-font-size-h4 = (font-size * 1.4);
-font-size-small = (font-size * 0.75);
 font-family = 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-font-family-h1 = 'Lemonada', cursive;
+font-family-h1 = 'DomaineDisplayNarrow', Georgia, serif;
+font-family-h2 = 'Lemonada', cursive;
 pad = 16px;
 width1 = 600px;
 width2 = 768px;
-width4 = 992px;
-width5 = 1200px;
+width3 = 992px;
+width4 = 1200px;
 
 box-shadow(args...) {
 	box-shadow: args;
@@ -26,7 +27,7 @@ box-shadow(args...) {
 	-moz-box-shadow: args;
 }
 
-fadein(speed = 1s) {
+fadeIn(speed = 1s) {
 	transition: opacity speed ease-in;
 	-webkit-transition: opacity speed ease-in;
 	-moz-transition: opacity speed ease-in;
@@ -34,7 +35,7 @@ fadein(speed = 1s) {
 	-o-transition: opacity speed ease-in;
 }
 
-hoverHighlight() {
+hoverTo(color) {
 	position: relative;
 
 	&::after {
@@ -43,16 +44,35 @@ hoverHighlight() {
 		right: 0;
 		bottom: 0;
 		left: 0;
-		background: rgba(255, 255, 255, 0.25);
+		border-radius: 17px;
+		background: color;
 		content: '';
 		opacity: 0;
 
-		fadein(0.25s);
+		fadeIn(0.25s);
+
+		+responsive(width2) {
+			border-radius: 21px;
+		}
+
+		+responsive(width3) {
+			border-radius: 25px;
+		}
 	}
 
-	&:hover::after {
-		opacity: 1;
+	&:hover, &:focus {
+		&::after {
+			opacity: 1;
+		}
 	}
+}
+
+hoverLight() {
+	hoverTo(rgba(255, 255, 255, 0.25));
+}
+
+hoverDark() {
+	hoverTo(rgba(77, 72, 97, 0.25));
 }
 
 responsive(var) {

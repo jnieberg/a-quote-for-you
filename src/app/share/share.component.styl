@@ -1,41 +1,43 @@
 @require '../../assets/stylus/variables';
 
+a {
+	display: block;
+	margin: 0 (pad * 0.25);
+	padding: (pad * 0.5);
+	min-width: 18px;
+	border-radius: 17px;
+	background: color0;
+	content: none;
+	text-transform: uppercase;
+
+	hoverDark();
+
+	+responsive(width2) {
+		padding: (pad * 0.75);
+		border-radius: 21px;
+	}
+
+	+responsive(width3) {
+		padding: pad;
+		border-radius: 25px;
+	}
+}
+
 .media-links {
-	position: fixed;
-	right: 0;
-	bottom: 0;
-	left: 0;
 	display: flex;
-	justify-content: center;
+	justify-content: flex-start;
 
 	a {
-		display: block;
-		margin: (pad * 0.5);
-		padding: (pad * 0.5);
-		background: color1;
-		text-decoration: none;
-		text-transform: uppercase;
+		color: #fff;
 
-		&.media-facebook {
-			background: #306199; // facebook blue
-			box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
-			color: #fff;
-		}
+		hoverLight();
+	}
 
-		&.media-twitter {
-			background: #26c4f1; // twitter blue
-			box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
-			color: #fff;
-		}
+	.link-media-facebook {
+		background: #306199; // facebook blue
+	}
 
-		hoverHighlight();
-
-		+responsive(width2) {
-			padding: (pad * 0.75);
-		}
-
-		+responsive(width3) {
-			padding: pad;
-		}
+	.link-media-twitter {
+		background: #26c4f1; // twitter blue
 	}
 }

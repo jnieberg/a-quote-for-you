@@ -1,5 +1,10 @@
 <div class="media-links">
-	<a *ngFor="let share of shares" [href]="getLink(share)" target="_blank" [class]="className(share)">{{text.shareOn}}
-		{{share.media}}</a>
-	<a (click)="refresh($event)" class="link-next">{{text.nextQuote}}</a>
+	<a *ngFor="let share of shares" [href]="getLink(share)" target="_blank" [class]="className(share)"
+		 attr.alt="{{text.shareOn}}{{share.media}}" attr.title="{{text.shareOn}}{{share.media}}">
+		<span [class]="share.icon ? 'fab fa-' + share.icon : ''"></span>
+	</a>
 </div>
+<a (click)=" refresh($event)" href="javascript:void();" class="link-next" attr.alt="{{text.nextQuote}}"
+	 attr.title="{{text.nextQuote}}">
+	<span class="fas fa-arrow-right"></span>
+</a>

@@ -1,0 +1,14 @@
+
+@require '../assets/stylus/variables';
+
+h1 {
+	font-size: font-size-md;
+
+	+responsive(width2) {
+		font-size: font-size-lg;
+	}
+
+	+responsive(width3) {
+		font-size: font-size-xl;
+	}
+}

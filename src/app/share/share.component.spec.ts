@@ -46,14 +46,14 @@ describe('Component: ShareComponent', () => {
 		describe('* Social button text', () => {
 			const thisResult = 'Share on ';
 			it(`Should contain "${thisResult}"`, () => {
-				expect(templateElement({ element, query: '.media-facebook' })).toContain(thisResult);
-				expect(templateElement({ element, query: '.media-twitter' })).toContain(thisResult);
+				expect(templateElement({ element, query: '.link-media-facebook' })).toContain(thisResult);
+				expect(templateElement({ element, query: '.link-media-twitter' })).toContain(thisResult);
 			});
 		});
 		describe('* Social button link', () => {
 			const thisResult = 'https://www.facebook.com/sharer/sharer.php?u=github.com%2Fjnieberg&quote=%E2%80%9CUse%20the%20mock%2C%20Luke%E2%80%9D%0A%E2%80%94Obi%20Mockanobi';
 			it(`Should be "${thisResult}"`, () => {
-				expect(templateElement({ attr: 'href', element, query: '.media-facebook' })).toBe(thisResult);
+				expect(templateElement({ attr: 'href', element, query: '.link-media-facebook' })).toBe(thisResult);
 			});
 		});
 	});
