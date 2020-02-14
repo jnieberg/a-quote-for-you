@@ -24,11 +24,11 @@ export class QuoteComponent implements OnInit {
 		return this.quote && this.quote.author;
 	}
 
-	public get showShare(): boolean {
+	public get showFooter(): boolean {
 		return !this.showError && this.showQuote;
 	}
 
-	public refresh(byAuthor: string = ''): void {
+	public refreshQuote(byAuthor: string = ''): void {
 		this.showQuote = false;
 		this.showError = false;
 		setTimeout(() => {
@@ -43,7 +43,7 @@ export class QuoteComponent implements OnInit {
 	}
 
 	ngOnInit(): void {
-		this.refresh();
+		this.refreshQuote();
 	}
 
 }

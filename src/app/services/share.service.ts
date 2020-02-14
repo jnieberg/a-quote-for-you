@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { CONFIGURATION } from 'src/config/config';
+import { CONFIGURATION } from '../../config/config';
 import { Share } from '../models/share';
 
 @Injectable({

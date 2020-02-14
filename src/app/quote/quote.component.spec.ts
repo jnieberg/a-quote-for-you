@@ -4,8 +4,8 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { CONFIGURATION } from 'src/config/config';
 import { templateElement } from 'src/test/template-element';
+import { FooterComponent } from '../footer/footer.component';
 import { QuoteService } from '../services/quote.service';
-import { ShareComponent } from '../share/share.component';
 import { QuoteComponent } from './quote.component';
 
 describe('Component: QuoteComponent', () => {
@@ -16,7 +16,7 @@ describe('Component: QuoteComponent', () => {
 
 	beforeEach(() => {
 		TestBed.configureTestingModule({
-			declarations: [QuoteComponent, ShareComponent],
+			declarations: [QuoteComponent, FooterComponent],
 			providers: [QuoteService],
 			imports: [RouterTestingModule, HttpClientTestingModule]
 		}).compileComponents();
@@ -44,10 +44,10 @@ describe('Component: QuoteComponent', () => {
 				expect(result).toBe(thisResult);
 			});
 		});
-		describe('* refresh()', () => {
+		describe('* refreshQuote()', () => {
 			const thisResult = 'false';
 			it(`"showQuote" should be "${thisResult}"`, () => {
-				component.refresh();
+				component.refreshQuote();
 				expect(component.showQuote).toBeFalsy();
 			});
 		});

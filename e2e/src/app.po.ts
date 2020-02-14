@@ -22,14 +22,14 @@ export class AppPage {
 	}
 
 	getShareButton(): Promise<string> {
-		return element(by.css('app-quote .link-media-facebook')).getAttribute('alt') as Promise<string>;
+		return element(by.css('app-footer .link-media-facebook')).getAttribute('alt') as Promise<string>;
 	}
 
 	getShareButtonLink(): Promise<string> {
-		return element(by.css('app-quote .link-media-twitter')).getAttribute('href') as Promise<string>;
+		return element(by.css('app-footer .link-media-twitter')).getAttribute('href') as Promise<string>;
 	}
 
 	getNextButton(): Promise<string> {
-		return element(by.css('app-quote .link-next')).getAttribute('alt') as Promise<string>;
+		return element(by.css('app-footer .link-next')).getAttribute('alt') as Promise<string>;
 	}
 }

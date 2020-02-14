@@ -16,7 +16,7 @@ export const CONFIGURATION: Configuration = {
 		uri: 'https://twitter.com/intent/tweet?text=',
 	}],
 	localization: {
-		title: '~ A Quote for You ~',
+		title: 'A Quote for You',
 		shareOn: 'Share on ',
 		showMore: 'Show more quotes from ',
 		nextQuote: 'Next quote',

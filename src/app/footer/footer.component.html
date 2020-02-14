@@ -4,7 +4,7 @@
 		<span [class]="share.icon ? 'fab fa-' + share.icon : ''"></span>
 	</a>
 </div>
-<a (click)=" refresh($event)" href="javascript:void();" class="link-next" attr.alt="{{text.nextQuote}}"
+<a (click)="refreshQuote($event)" href="javascript:void();" class="link-next" attr.alt="{{text.nextQuote}}"
 	 attr.title="{{text.nextQuote}}">
 	<span class="fas fa-arrow-right"></span>
 </a>

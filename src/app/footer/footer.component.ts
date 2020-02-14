@@ -4,11 +4,11 @@ import { Share } from '../models/share';
 import { ShareService } from '../services/share.service';
 
 @Component({
-	selector: 'app-share',
-	templateUrl: './share.component.html',
-	styleUrls: ['./share.component.styl']
+	selector: 'app-footer',
+	templateUrl: './footer.component.html',
+	styleUrls: ['./footer.component.styl']
 })
-export class ShareComponent {
+export class FooterComponent {
 	@Input() public content: string = '';
 	@Input() public author: string = '';
 	@Output() refreshE: EventEmitter<any> = new EventEmitter<any>();
@@ -31,7 +31,7 @@ export class ShareComponent {
 		return `link-media-${share.media.toLowerCase()}`;
 	}
 
-	public refresh($event: MouseEvent): void {
+	public refreshQuote($event: MouseEvent): void {
 		this.refreshE.emit($event);
 	}
 }
