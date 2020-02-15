@@ -8,9 +8,12 @@ import { FooterComponent } from './footer/footer.component';
 import { QuoteComponent } from './quote/quote.component';
 
 export class MyHammerConfig extends HammerGestureConfig {
-	overrides: any = {
-		swipe: { direction: Hammer.DIRECTION_ALL },
-	};
+	buildHammer(element: HTMLElement): Hammer {
+		const mc = new Hammer(element, {
+			touchAction: 'pan-y',
+		});
+		return mc;
+	}
 }
 
 @NgModule({

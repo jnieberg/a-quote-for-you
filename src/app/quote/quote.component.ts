@@ -41,7 +41,7 @@ export class QuoteComponent implements OnInit {
 				console.error(`WARNING! An error occured while loading quote: ${error.message}`);
 				this.showError = true;
 			});
-		}, 1000);
+		}, 500);
 	}
 
 	ngOnInit(): void {
