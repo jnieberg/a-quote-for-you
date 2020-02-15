@@ -24,17 +24,19 @@ blockquote {
 		display: block;
 		padding-top: 0;
 		color: color0;
-		text-align: center;
+		text-align: justify;
 		font-size: font-size-md;
 		font-family: font-family-h2;
 		line-height: line-height;
 
 		&::before {
+			margin-right: 8px;
 			content: '“';
 			font-size: 150%;
 		}
 
 		&::after {
+			margin-left: 8px;
 			content: '”';
 			font-size: 150%;
 		}
@@ -64,20 +66,16 @@ blockquote {
 		a {
 			color: color2;
 			font-size: font-size-xs;
+
+			+responsive(width2) {
+				font-size: font-size-sm;
+			}
 		}
 
 		hoverLight();
 
 		&::before {
 			content: '—';
-		}
-
-		+responsive(width2) {
-			font-size: font-size-sm;
-		}
-
-		+responsive(width3) {
-			font-size: font-size-sm;
 		}
 	}
 
