@@ -7,5 +7,5 @@ import { CONFIGURATION } from 'src/config/config';
 	styleUrls: ['./app.component.styl']
 })
 export class AppComponent {
-	public text: any = CONFIGURATION.localization;
+	public readonly text: any = CONFIGURATION.localization;
 }

@@ -3,22 +3,27 @@
 a {
 	display: block;
 	margin: 0 (pad * 0.25);
-	padding: (pad * 0.5);
-	min-width: 18px;
+	padding: 0;
+	min-width: 34px;
+	height: 34px;
 	border-radius: 17px;
 	background: color0;
 	text-transform: uppercase;
+	font-size: font-size-sm;
+	line-height: 34px;
 
 	hoverDark();
 
 	+responsive(width2) {
-		padding: (pad * 0.75);
+		min-width: 44px;
+		height: 44px;
 		border-radius: 21px;
+		font-size: font-size-lg;
+		line-height: 42px;
 	}
 
 	+responsive(width3) {
-		padding: pad;
-		border-radius: 25px;
+		margin: 4px (pad * 0.5);
 	}
 }
 
@@ -30,13 +35,5 @@ a {
 		color: #fff;
 
 		hoverLight();
-	}
-
-	.link-media-facebook {
-		background: #306199; // facebook blue
-	}
-
-	.link-media-twitter {
-		background: #26c4f1; // twitter blue
 	}
 }

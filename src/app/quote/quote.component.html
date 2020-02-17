@@ -1,13 +1,22 @@
 <main>
-	<div *ngIf="showError" class="error">{{text.error.quote}}</div>
-	<blockquote class="visibility-state-{{showQuote}}" (swipeleft)="refreshQuote()">
+	<div *ngIf="showError"
+		class="error">{{text.error.quote}}</div>
+	<blockquote class="visibility-state-{{visibilityQuote}}"
+		(swipeleft)="newQuote()">
 		<h2>{{content}}</h2>
-		<h3 (click)="refreshQuote(author)"><a href="javascript:void(0);" attr.alt="{{text.showMore}} {{author}}"
-				 attr.title="{{text.showMore}} {{author}}">{{author}}</a>
+		<h3 (click)="newQuote(author)">
+			<a href="javascript:void(0);"
+				attr.alt="{{text.showMore}} {{author}}"
+				attr.title="{{text.showMore}} {{author}}">
+				{{author}}
+			</a>
 		</h3>
 	</blockquote>
 </main>
 <footer>
-	<app-footer [class]="showFooter ? 'show':'hide'" [content]="content" [author]="author" (refreshE)="refreshQuote()">
+	<app-footer [class]="showFooter ? 'show':'hide'"
+		[content]="content"
+		[author]="author"
+		(newQuoteE)="newQuote()">
 	</app-footer>
 </footer>

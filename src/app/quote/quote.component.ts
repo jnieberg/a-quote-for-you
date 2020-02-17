@@ -10,9 +10,9 @@ import { QuoteService } from '../services/quote.service';
 	styleUrls: ['./quote.component.styl']
 })
 export class QuoteComponent implements OnInit {
+	public readonly text: any = CONFIGURATION.localization;
 	public quote: Quote;
-	public text: any = CONFIGURATION.localization;
-	public showQuote: VisibilityState = VisibilityState.limbo;
+	public visibilityQuote: VisibilityState = VisibilityState.limbo; // "hidden": * <-- [ ] move from screen to left, "limbo": [ ] * hidden at the right, "visible": [*] <-- move from right to screen
 	public showError: boolean = false;
 
 	constructor(private quoteService: QuoteService) { }
@@ -26,26 +26,28 @@ export class QuoteComponent implements OnInit {
 	}
 
 	public get showFooter(): boolean {
-		return !this.showError && this.showQuote === VisibilityState.visible;
+		return !this.showError && this.visibilityQuote === VisibilityState.visible;
 	}
 
-	public refreshQuote(byAuthor: string = ''): void {
-		this.showQuote = VisibilityState.hidden;
+	// When "byAuthor" is not empty it will get a new quote from a specific author name.
+	public newQuote(byAuthor: string = ''): void {
+		this.visibilityQuote = VisibilityState.hidden;
 		this.showError = false;
 		setTimeout(() => {
-			this.showQuote = VisibilityState.limbo;
-			this.quoteService.getRandomQuote(byAuthor).subscribe(result => {
-				this.quote = result;
-				this.showQuote = VisibilityState.visible;
-			}, (error) => {
-				console.error(`WARNING! An error occured while loading quote: ${error.message}`);
-				this.showError = true;
-			});
+			this.visibilityQuote = VisibilityState.limbo;
+			this.quoteService.getRandomQuote(byAuthor)
+				.subscribe(result => {
+					this.quote = result;
+					this.visibilityQuote = VisibilityState.visible;
+				}, (error) => {
+					console.error(`WARNING! An error occured while loading quote: ${error.message}`);
+					this.showError = true;
+				});
 		}, 500);
 	}
 
 	ngOnInit(): void {
-		this.refreshQuote();
+		this.newQuote();
 	}
 
 }

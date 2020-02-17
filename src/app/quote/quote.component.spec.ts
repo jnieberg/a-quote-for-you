@@ -45,11 +45,11 @@ describe('Component: QuoteComponent', () => {
 				expect(result).toBe(thisResult);
 			});
 		});
-		describe('* refreshQuote()', () => {
+		describe('* newQuote()', () => {
 			const thisResult = 'hidden';
-			it(`"showQuote" should be "${thisResult}"`, () => {
-				component.refreshQuote();
-				expect(component.showQuote).toBe(VisibilityState.hidden);
+			it(`"visibilityQuote" should be "${thisResult}"`, () => {
+				component.newQuote();
+				expect(component.visibilityQuote).toBe(VisibilityState.hidden);
 			});
 		});
 	});
@@ -59,7 +59,7 @@ describe('Component: QuoteComponent', () => {
 			const thatResult = 'visibility-state-2';
 			it(`Should be "${thisResult}" and then "${thatResult}"`, () => {
 				expect(templateElement({ attr: 'class', element, query: 'blockquote' })).toBe(thisResult);
-				component.showQuote = VisibilityState.visible;
+				component.visibilityQuote = VisibilityState.visible;
 				fixture.detectChanges();
 				expect(templateElement({ attr: 'class', element, query: 'blockquote' })).toBe(thatResult);
 			});

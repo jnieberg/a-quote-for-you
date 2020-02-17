@@ -3,6 +3,7 @@ html {
 
 	body {
 		height: 100%;
+		background: color1;
 		color: color5;
 		font-size: font-size-sm;
 		font-family: font-family;
@@ -51,17 +52,6 @@ html {
 		width: 'calc(100% - %s)' % pad;
 		height: 100%;
 		text-align: center;
-
-		&::before {
-			position: fixed;
-			top: 0;
-			right: 0;
-			bottom: 0;
-			left: 0;
-			z-index: -1;
-			background-color: color1;
-			content: '';
-		}
 
 		+responsive(width1) {
 			width: (width1 - 32px);

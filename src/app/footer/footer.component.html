@@ -1,10 +1,18 @@
 <div class="media-links">
-	<a *ngFor="let share of shares" [href]="getLink(share)" target="_blank" [class]="className(share)"
-		 attr.alt="{{text.shareOn}}{{share.media}}" attr.title="{{text.shareOn}}{{share.media}}">
+	<a *ngFor="let share of shareIcons"
+		[href]="getShareLink(share)"
+		target="_blank"
+		[class]="getShareClassName(share)"
+		[style.background]="share.color"
+		attr.alt="{{text.shareOn}}{{share.media}}"
+		attr.title="{{text.shareOn}}{{share.media}}">
 		<span [class]="share.icon ? 'fab fa-' + share.icon : ''"></span>
 	</a>
 </div>
-<a (click)="refreshQuote($event)" href="javascript:void(0);" class="link-next" attr.alt="{{text.nextQuote}}"
-	 attr.title="{{text.nextQuote}}">
+<a (click)="newQuote($event)"
+	href="javascript:void(0);"
+	class="link-next"
+	attr.alt="{{text.nextQuote}}"
+	attr.title="{{text.nextQuote}}">
 	<span class="fas fa-arrow-right"></span>
 </a>

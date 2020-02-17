@@ -19,7 +19,7 @@ describe('Service: QuoteService', () => {
 
 	describe('* Functions', () => {
 		describe('* getRandomQuote()', () => {
-			const thisResult = { content: 'Use the mock, Luke', author: 'Obi Mockanobi' };
+			const thisResult = { content: 'Use the mock, Luke', author: 'Obi Mock Kenobi' };
 			it(`Should return ${JSON.stringify(thisResult)}`, (done) => {
 				service.getRandomQuote()
 					.subscribe(res => {
