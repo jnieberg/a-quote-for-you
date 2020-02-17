@@ -1,7 +1,7 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { DomSanitizer, SafeUrl } from '@angular/platform-browser';
 import { CONFIGURATION } from 'src/config/config';
-import { Share } from '../models/share';
+import { Share } from '../../models/share';
 
 @Component({
 	selector: 'app-footer',

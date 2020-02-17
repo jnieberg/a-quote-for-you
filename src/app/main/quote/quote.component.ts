@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { CONFIGURATION } from 'src/config/config';
-import { VisibilityState } from '../enums/visibilityState';
-import { Quote } from '../models/quote';
-import { QuoteService } from '../services/quote.service';
+import { VisibilityState } from '../../enums/visibilityState';
+import { Quote } from '../../models/quote';
+import { QuoteService } from '../../services/quote.service';
 
 @Component({
 	selector: 'app-quote',
@@ -27,6 +27,10 @@ export class QuoteComponent implements OnInit {
 
 	public get showFooter(): boolean {
 		return !this.showError && this.visibilityQuote === VisibilityState.visible;
+	}
+
+	public get showToWait(): boolean {
+		return !this.showError && this.visibilityQuote === VisibilityState.limbo;
 	}
 
 	// When "byAuthor" is not empty it will get a new quote from a specific author name.

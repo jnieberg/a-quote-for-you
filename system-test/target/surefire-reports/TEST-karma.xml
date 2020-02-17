@@ -1,18 +1,18 @@
 <?xml version="1.0"?>
-<testsuite name="Chrome 80.0.3987 (Windows 10.0.0)" package="" timestamp="2020-02-17T13:40:02" id="0" hostname="NL03079-2" tests="10" errors="0" failures="0" time="0.711">
+<testsuite name="Chrome 80.0.3987 (Windows 10.0.0)" package="" timestamp="2020-02-17T14:21:48" id="0" hostname="NL03079-2" tests="10" errors="0" failures="0" time="0.958">
   <properties>
     <property name="browser.fullName" value="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36"/>
   </properties>
-  <testcase name="Component: QuoteComponent * Functions * get content() Should return &quot;Use the mock, Luke&quot;" time="0.142" classname="Component: QuoteComponent * Functions * get content()"/>
-  <testcase name="Component: QuoteComponent * Functions * get author() Should return &quot;Obi Mock Kenobi&quot;" time="0.102" classname="Component: QuoteComponent * Functions * get author()"/>
-  <testcase name="Component: QuoteComponent * Functions * newQuote() &quot;visibilityQuote&quot; should be &quot;hidden&quot;" time="0.098" classname="Component: QuoteComponent * Functions * newQuote()"/>
-  <testcase name="Component: QuoteComponent * Template * Quote panel class Should be &quot;visibility-state-0&quot; and then &quot;visibility-state-2&quot;" time="0.078" classname="Component: QuoteComponent * Template * Quote panel class"/>
-  <testcase name="Component: QuoteComponent * Template * Quote panel content Should contain &quot;Use the mock, Luke&quot;" time="0.079" classname="Component: QuoteComponent * Template * Quote panel content"/>
-  <testcase name="Component: FooterComponent * Template * Social button text Should contain &quot;Share on &quot;" time="0.047" classname="Component: FooterComponent * Template * Social button text"/>
-  <testcase name="Component: FooterComponent * Template * Social button link Should be &quot;https://www.facebook.com/sharer/sharer.php?u=quoteforyou.netlify.com&amp;quote=%E2%80%9CUse%20the%20mock%2C%20Luke%E2%80%9D%0A%E2%80%94Obi%20Mock%20Kenobi%0A%0Ahttps%3A%2F%2Fquoteforyou.netlify.com&quot;" time="0.041" classname="Component: FooterComponent * Template * Social button link"/>
-  <testcase name="Component: FooterComponent * Functions * getShareLink(share: Share) Should return &quot;www.yodatalk.com?c=%E2%80%9CUse%20the%20mock%2C%20Luke%E2%80%9D%0A%E2%80%94Obi%20Mock%20Kenobi%0A%0Ahttps%3A%2F%2Fquoteforyou.netlify.com&quot;" time="0.042" classname="Component: FooterComponent * Functions * getShareLink(share: Share)"/>
-  <testcase name="Component: FooterComponent * Functions * getShareClassName(share: Share) Should return &quot;link-media-facebook&quot;" time="0.04" classname="Component: FooterComponent * Functions * getShareClassName(share: Share)"/>
-  <testcase name="Service: QuoteService * Functions * getRandomQuote() Should return {&quot;content&quot;:&quot;Use the mock, Luke&quot;,&quot;author&quot;:&quot;Obi Mock Kenobi&quot;}" time="0.042" classname="Service: QuoteService * Functions * getRandomQuote()"/>
+  <testcase name="Service: QuoteService * Functions * getRandomQuote() Should return {&quot;content&quot;:&quot;Use the mock, Luke&quot;,&quot;author&quot;:&quot;Obi Mock Kenobi&quot;}" time="0.164" classname="Service: QuoteService * Functions * getRandomQuote()"/>
+  <testcase name="Component: FooterComponent * Functions * getShareLink(share: Share) Should return &quot;www.yodatalk.com?c=%E2%80%9CUse%20the%20mock%2C%20Luke%E2%80%9D%0A%E2%80%94Obi%20Mock%20Kenobi%0A%0Ahttps%3A%2F%2Fquoteforyou.netlify.com&quot;" time="0.073" classname="Component: FooterComponent * Functions * getShareLink(share: Share)"/>
+  <testcase name="Component: FooterComponent * Functions * getShareClassName(share: Share) Should return &quot;link-media-facebook&quot;" time="0.065" classname="Component: FooterComponent * Functions * getShareClassName(share: Share)"/>
+  <testcase name="Component: FooterComponent * Template * Social button text Should contain &quot;Share on &quot;" time="0.062" classname="Component: FooterComponent * Template * Social button text"/>
+  <testcase name="Component: FooterComponent * Template * Social button link Should be &quot;https://www.facebook.com/sharer/sharer.php?u=quoteforyou.netlify.com&amp;quote=%E2%80%9CUse%20the%20mock%2C%20Luke%E2%80%9D%0A%E2%80%94Obi%20Mock%20Kenobi%0A%0Ahttps%3A%2F%2Fquoteforyou.netlify.com&quot;" time="0.069" classname="Component: FooterComponent * Template * Social button link"/>
+  <testcase name="Component: QuoteComponent * Functions * newQuote() &quot;visibilityQuote&quot; should be &quot;hidden&quot;" time="0.108" classname="Component: QuoteComponent * Functions * newQuote()"/>
+  <testcase name="Component: QuoteComponent * Functions * get content() Should return &quot;Use the mock, Luke&quot;" time="0.109" classname="Component: QuoteComponent * Functions * get content()"/>
+  <testcase name="Component: QuoteComponent * Functions * get author() Should return &quot;Obi Mock Kenobi&quot;" time="0.084" classname="Component: QuoteComponent * Functions * get author()"/>
+  <testcase name="Component: QuoteComponent * Template * Quote panel class Should be &quot;visibility-state-0&quot; and then &quot;visibility-state-2&quot;" time="0.109" classname="Component: QuoteComponent * Template * Quote panel class"/>
+  <testcase name="Component: QuoteComponent * Template * Quote panel content Should contain &quot;Use the mock, Luke&quot;" time="0.115" classname="Component: QuoteComponent * Template * Quote panel content"/>
   <system-out>
     <![CDATA[
 ]]>

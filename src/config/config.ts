@@ -32,7 +32,8 @@ export const CONFIGURATION: Configuration = {
 		nextQuote: 'Next quote',
 		error: {
 			quote: 'Could not get quote. Please be inspired later.'
-		}
+		},
+		wait: 'Loading quote...'
 	},
 	mock: {
 		api: {

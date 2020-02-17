@@ -4,9 +4,9 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { CONFIGURATION } from 'src/config/config';
 import { templateElement } from 'src/test/template-element';
-import { VisibilityState } from '../enums/visibilityState';
+import { VisibilityState } from '../../enums/visibilityState';
+import { QuoteService } from '../../services/quote.service';
 import { FooterComponent } from '../footer/footer.component';
-import { QuoteService } from '../services/quote.service';
 import { QuoteComponent } from './quote.component';
 
 describe('Component: QuoteComponent', () => {

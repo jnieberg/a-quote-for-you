@@ -4,8 +4,8 @@ import { BrowserModule, HammerGestureConfig, HAMMER_GESTURE_CONFIG } from '@angu
 import * as Hammer from 'hammerjs';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { FooterComponent } from './footer/footer.component';
-import { QuoteComponent } from './quote/quote.component';
+import { FooterComponent } from './main/footer/footer.component';
+import { QuoteComponent } from './main/quote/quote.component';
 
 export class MyHammerConfig extends HammerGestureConfig {
 	buildHammer(element: HTMLElement): Hammer {

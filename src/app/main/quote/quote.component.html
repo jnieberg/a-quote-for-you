@@ -1,6 +1,7 @@
 <main>
 	<div *ngIf="showError"
 		class="error">{{text.error.quote}}</div>
+	<div *ngIf="showToWait">{{text.wait}}</div>
 	<blockquote class="visibility-state-{{visibilityQuote}}"
 		(swipeleft)="newQuote()">
 		<h2>{{content}}</h2>
@@ -14,7 +15,7 @@
 	</blockquote>
 </main>
 <footer>
-	<app-footer [class]="showFooter ? 'show':'hide'"
+	<app-footer [class]="showFooter ? 'show' : 'hide'"
 		[content]="content"
 		[author]="author"
 		(newQuoteE)="newQuote()">

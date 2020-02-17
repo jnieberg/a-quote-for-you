@@ -25,7 +25,7 @@ export class QuoteService {
 							const index = Math.floor(Math.random() * resultApi.results.length);
 							quote = resultApi.results[index];
 						}
-						return { // We only need the quote and the author
+						return { // We only need the quote and the author from the response
 							content: quote.content,
 							author: quote.author
 						};
@@ -39,12 +39,12 @@ export class QuoteService {
 		if (byAuthor) {
 			endpoint = this.api.endpointAuthor + byAuthor;
 		}
-		switch (!this.api.method || this.api.method.toUpperCase()) { // check API request method
+		switch (!this.api.method || this.api.method.toUpperCase()) { // Check API request method
 			case 'GET': return this.http.get<T>(endpoint);
 			case 'POST': return this.http.post<T>(endpoint, this.api.query);
 			case 'PUT': return this.http.put<T>(endpoint, this.api.query);
 			case 'DELETE': return this.http.delete<T>(endpoint);
 		}
-		return this.http.get<T>(endpoint); // defaults to "GET"
+		return this.http.get<T>(endpoint); // Defaults to "GET" method
 	}
 }
