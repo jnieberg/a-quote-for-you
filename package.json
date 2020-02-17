@@ -1,7 +1,10 @@
 {
 	"name": "quotes",
-	"version": "0.0.0",
+	"displayName": "A Quote for You",
+	"description": "A random quote generator, for who wants to be inspired.",
 	"icon": "src/assets/images/quote-alt.png",
+	"publisher": "jnieberg",
+	"version": "1.0.0",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/jnieberg/a-quote-for-you.git"
